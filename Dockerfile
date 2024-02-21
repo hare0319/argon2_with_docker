@@ -7,8 +7,8 @@ USER node
 
 WORKDIR /app
 
-COPY --chown=node:node ./package.json ./package-lock.json ./
-RUN npm i
+COPY --chown=node:node ./package.json ./pnpm-lock.yaml ./
+RUN pnpm i
 
 COPY --chown=node:node . .
 
